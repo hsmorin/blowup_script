@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Executive conclusion}{2}{section.1}%
+\contentsline {section}{\numberline {2}Identity of the model}{2}{section.2}%
+\contentsline {section}{\numberline {3}Exact transverse singularity types}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Method}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Corrected table}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}The omitted isolated ODP}{4}{section.4}%
+\contentsline {section}{\numberline {5}Comparison with the Rust blowup audit}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}What the 33-stage file actually proves}{4}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Why the two ledgers cannot yet be merged}{5}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Status of the downstream claims}{5}{section.6}%
+\contentsline {section}{\numberline {7}Work required for a valid final theorem}{6}{section.7}%
+\contentsline {section}{\numberline {8}Reproducibility files}{6}{section.8}%
+\contentsline {section}{\numberline {A}Exact command output}{7}{appendix.A}%

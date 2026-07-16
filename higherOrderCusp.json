@@ -1,0 +1,320 @@
+{
+  "schema": "blowup-script/v1",
+  "base_field": "Q",
+  "ambient": {"kind":"projective","hypersurface_dimension":1,"projective_space_dimension":2,"coordinates":["x0","x1","x2"]},
+  "initial_hypersurface": {"polynomial":"x1^11 - x0^3*x2^8","normalized_polynomial":"-x0^3*x2^8 + x1^11","degree":11},
+  "charts": [
+    {
+      "id": 0,
+      "parent": null,
+      "label": "x0 != 0",
+      "active": false,
+      "variables": ["x1","x2"],
+      "polynomial": "x1^11 - x2^8",
+      "substitutions": ["x0 = 1"]
+    },
+    {
+      "id": 1,
+      "parent": null,
+      "label": "x1 != 0",
+      "active": true,
+      "variables": ["x0","x2"],
+      "polynomial": "-x0^3*x2^8 + 1",
+      "substitutions": ["x1 = 1"]
+    },
+    {
+      "id": 2,
+      "parent": null,
+      "label": "x2 != 0",
+      "active": false,
+      "variables": ["x0","x1"],
+      "polynomial": "-x0^3 + x1^11",
+      "substitutions": ["x2 = 1"]
+    },
+    {
+      "id": 3,
+      "parent": 0,
+      "label": "blowup 1 of chart 0, x1-chart",
+      "active": false,
+      "variables": ["x1","x2"],
+      "polynomial": "x1^3 - x2^8",
+      "substitutions": ["x1 -> x1","x2 -> x1*x2"]
+    },
+    {
+      "id": 4,
+      "parent": 0,
+      "label": "blowup 1 of chart 0, x2-chart",
+      "active": true,
+      "variables": ["x1","x2"],
+      "polynomial": "x1^11*x2^3 - 1",
+      "substitutions": ["x1 -> x1*x2","x2 -> x2"]
+    },
+    {
+      "id": 5,
+      "parent": 2,
+      "label": "blowup 2 of chart 2, x0-chart",
+      "active": true,
+      "variables": ["x0","x1"],
+      "polynomial": "x0^8*x1^11 - 1",
+      "substitutions": ["x0 -> x0","x1 -> x0*x1"]
+    },
+    {
+      "id": 6,
+      "parent": 2,
+      "label": "blowup 2 of chart 2, x1-chart",
+      "active": false,
+      "variables": ["x0","x1"],
+      "polynomial": "-x0^3 + x1^8",
+      "substitutions": ["x0 -> x0*x1","x1 -> x1"]
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "label": "blowup 3 of chart 6, x0-chart",
+      "active": true,
+      "variables": ["x0","x1"],
+      "polynomial": "x0^5*x1^8 - 1",
+      "substitutions": ["x0 -> x0","x1 -> x0*x1"]
+    },
+    {
+      "id": 8,
+      "parent": 6,
+      "label": "blowup 3 of chart 6, x1-chart",
+      "active": false,
+      "variables": ["x0","x1"],
+      "polynomial": "-x0^3 + x1^5",
+      "substitutions": ["x0 -> x0*x1","x1 -> x1"]
+    },
+    {
+      "id": 9,
+      "parent": 8,
+      "label": "blowup 4 of chart 8, x0-chart",
+      "active": true,
+      "variables": ["x0","x1"],
+      "polynomial": "x0^2*x1^5 - 1",
+      "substitutions": ["x0 -> x0","x1 -> x0*x1"]
+    },
+    {
+      "id": 10,
+      "parent": 8,
+      "label": "blowup 4 of chart 8, x1-chart",
+      "active": false,
+      "variables": ["x0","x1"],
+      "polynomial": "-x0^3 + x1^2",
+      "substitutions": ["x0 -> x0*x1","x1 -> x1"]
+    },
+    {
+      "id": 11,
+      "parent": 10,
+      "label": "blowup 5 of chart 10, x0-chart",
+      "active": true,
+      "variables": ["x0","x1"],
+      "polynomial": "-x0 + x1^2",
+      "substitutions": ["x0 -> x0","x1 -> x0*x1"]
+    },
+    {
+      "id": 12,
+      "parent": 10,
+      "label": "blowup 5 of chart 10, x1-chart",
+      "active": true,
+      "variables": ["x0","x1"],
+      "polynomial": "-x0^3*x1 + 1",
+      "substitutions": ["x0 -> x0*x1","x1 -> x1"]
+    },
+    {
+      "id": 13,
+      "parent": 3,
+      "label": "blowup 6 of chart 3, x1-chart",
+      "active": true,
+      "variables": ["x1","x2"],
+      "polynomial": "-x1^5*x2^8 + 1",
+      "substitutions": ["x1 -> x1","x2 -> x1*x2"]
+    },
+    {
+      "id": 14,
+      "parent": 3,
+      "label": "blowup 6 of chart 3, x2-chart",
+      "active": false,
+      "variables": ["x1","x2"],
+      "polynomial": "x1^3 - x2^5",
+      "substitutions": ["x1 -> x1*x2","x2 -> x2"]
+    },
+    {
+      "id": 15,
+      "parent": 14,
+      "label": "blowup 7 of chart 14, x1-chart",
+      "active": true,
+      "variables": ["x1","x2"],
+      "polynomial": "-x1^2*x2^5 + 1",
+      "substitutions": ["x1 -> x1","x2 -> x1*x2"]
+    },
+    {
+      "id": 16,
+      "parent": 14,
+      "label": "blowup 7 of chart 14, x2-chart",
+      "active": false,
+      "variables": ["x1","x2"],
+      "polynomial": "x1^3 - x2^2",
+      "substitutions": ["x1 -> x1*x2","x2 -> x2"]
+    },
+    {
+      "id": 17,
+      "parent": 16,
+      "label": "blowup 8 of chart 16, x1-chart",
+      "active": true,
+      "variables": ["x1","x2"],
+      "polynomial": "x1 - x2^2",
+      "substitutions": ["x1 -> x1","x2 -> x1*x2"]
+    },
+    {
+      "id": 18,
+      "parent": 16,
+      "label": "blowup 8 of chart 16, x2-chart",
+      "active": true,
+      "variables": ["x1","x2"],
+      "polynomial": "x1^3*x2 - 1",
+      "substitutions": ["x1 -> x1*x2","x2 -> x2"]
+    }
+  ],
+  "current_singular_components": [
+  ],
+  "current_singular_intersections": [
+  ],
+  "current_singular_locus": [
+    {
+      "chart": 1,
+      "chart_label": "x1 != 0",
+      "equations": [{"name":"f","polynomial":"-x0^3*x2^8 + 1"},{"name":"d/dx0","polynomial":"-3*x0^2*x2^8"},{"name":"d/dx2","polynomial":"-8*x0^3*x2^7"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 4,
+      "chart_label": "blowup 1 of chart 0, x2-chart",
+      "equations": [{"name":"f","polynomial":"x1^11*x2^3 - 1"},{"name":"d/dx1","polynomial":"11*x1^10*x2^3"},{"name":"d/dx2","polynomial":"3*x1^11*x2^2"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 5,
+      "chart_label": "blowup 2 of chart 2, x0-chart",
+      "equations": [{"name":"f","polynomial":"x0^8*x1^11 - 1"},{"name":"d/dx0","polynomial":"8*x0^7*x1^11"},{"name":"d/dx1","polynomial":"11*x0^8*x1^10"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 7,
+      "chart_label": "blowup 3 of chart 6, x0-chart",
+      "equations": [{"name":"f","polynomial":"x0^5*x1^8 - 1"},{"name":"d/dx0","polynomial":"5*x0^4*x1^8"},{"name":"d/dx1","polynomial":"8*x0^5*x1^7"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 9,
+      "chart_label": "blowup 4 of chart 8, x0-chart",
+      "equations": [{"name":"f","polynomial":"x0^2*x1^5 - 1"},{"name":"d/dx0","polynomial":"2*x0*x1^5"},{"name":"d/dx1","polynomial":"5*x0^2*x1^4"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 11,
+      "chart_label": "blowup 5 of chart 10, x0-chart",
+      "equations": [{"name":"f","polynomial":"-x0 + x1^2"},{"name":"d/dx0","polynomial":"-1"},{"name":"d/dx1","polynomial":"2*x1"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 12,
+      "chart_label": "blowup 5 of chart 10, x1-chart",
+      "equations": [{"name":"f","polynomial":"-x0^3*x1 + 1"},{"name":"d/dx0","polynomial":"-3*x0^2*x1"},{"name":"d/dx1","polynomial":"-x0^3"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 13,
+      "chart_label": "blowup 6 of chart 3, x1-chart",
+      "equations": [{"name":"f","polynomial":"-x1^5*x2^8 + 1"},{"name":"d/dx1","polynomial":"-5*x1^4*x2^8"},{"name":"d/dx2","polynomial":"-8*x1^5*x2^7"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 15,
+      "chart_label": "blowup 7 of chart 14, x1-chart",
+      "equations": [{"name":"f","polynomial":"-x1^2*x2^5 + 1"},{"name":"d/dx1","polynomial":"-2*x1*x2^5"},{"name":"d/dx2","polynomial":"-5*x1^2*x2^4"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 17,
+      "chart_label": "blowup 8 of chart 16, x1-chart",
+      "equations": [{"name":"f","polynomial":"x1 - x2^2"},{"name":"d/dx1","polynomial":"1"},{"name":"d/dx2","polynomial":"-2*x2"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    },
+    {
+      "chart": 18,
+      "chart_label": "blowup 8 of chart 16, x2-chart",
+      "equations": [{"name":"f","polynomial":"x1^3*x2 - 1"},{"name":"d/dx1","polynomial":"3*x1^2*x2"},{"name":"d/dx2","polynomial":"x1^3"}],
+      "rational_point_samples": [],
+      "sample_limit_hit": false
+    }
+  ],
+  "blowups": [
+    {
+      "stage": 1,
+      "input_chart": 0,
+      "multiplicity": 8,
+      "center": {"type":"affine_coordinate_center","assignments":{"x1":"0","x2":"0"}},
+      "output_charts": [3,4]
+    },
+    {
+      "stage": 2,
+      "input_chart": 2,
+      "multiplicity": 3,
+      "center": {"type":"affine_coordinate_center","assignments":{"x0":"0","x1":"0"}},
+      "output_charts": [5,6]
+    },
+    {
+      "stage": 3,
+      "input_chart": 6,
+      "multiplicity": 3,
+      "center": {"type":"affine_coordinate_center","assignments":{"x0":"0","x1":"0"}},
+      "output_charts": [7,8]
+    },
+    {
+      "stage": 4,
+      "input_chart": 8,
+      "multiplicity": 3,
+      "center": {"type":"affine_coordinate_center","assignments":{"x0":"0","x1":"0"}},
+      "output_charts": [9,10]
+    },
+    {
+      "stage": 5,
+      "input_chart": 10,
+      "multiplicity": 2,
+      "center": {"type":"affine_coordinate_center","assignments":{"x0":"0","x1":"0"}},
+      "output_charts": [11,12]
+    },
+    {
+      "stage": 6,
+      "input_chart": 3,
+      "multiplicity": 3,
+      "center": {"type":"affine_coordinate_center","assignments":{"x1":"0","x2":"0"}},
+      "output_charts": [13,14]
+    },
+    {
+      "stage": 7,
+      "input_chart": 14,
+      "multiplicity": 3,
+      "center": {"type":"affine_coordinate_center","assignments":{"x1":"0","x2":"0"}},
+      "output_charts": [15,16]
+    },
+    {
+      "stage": 8,
+      "input_chart": 16,
+      "multiplicity": 2,
+      "center": {"type":"affine_coordinate_center","assignments":{"x1":"0","x2":"0"}},
+      "output_charts": [17,18]
+    }
+  ]
+}

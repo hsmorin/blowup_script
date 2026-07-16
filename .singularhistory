@@ -1,0 +1,15 @@
+LIB "primdec.lib";
+ring r=0,(x,y,z),dp;
+poly f=x2+y2+z2;
+ideal I=f,diff(f,x),diff(f,y),diff(f,z);
+list L=minAssGTZ(I);
+print("COUNT="+string(size(L)));
+int i;
+for (i=1;i<=size(L);i++) {
+  print("BEGIN="+string(i));
+  ideal J=L[i];
+  print(J);
+  print("DIM="+string(dim(std(J))));
+  print("END="+string(i));
+}
+quit;

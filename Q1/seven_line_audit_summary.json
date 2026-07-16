@@ -1,0 +1,112 @@
+{
+  "crepant_audit": {
+    "status": "incomplete_positive_dimensional_singular_locus",
+    "resolution_complete": false,
+    "initial_claim_is_correct": false,
+    "initial_generic_transverse_types_in_component_order": [
+      "cA1",
+      "cA3",
+      "cA4",
+      "cA5",
+      "cA1",
+      "cA3",
+      "cA3"
+    ],
+    "initial_generic_transverse_types_sorted": [
+      "cA1",
+      "cA1",
+      "cA3",
+      "cA3",
+      "cA3",
+      "cA4",
+      "cA5"
+    ],
+    "crepant_curve_blowups": {
+      "global_stages": 33,
+      "chartwise_records": 105,
+      "center_codimension": 2,
+      "branch_multiplicity": 2,
+      "discrepancy": 0,
+      "discrepancy_formula": "codimension - 1 - floor(multiplicity / 2)"
+    },
+    "stage_33_singular_locus": {
+      "is_zero_dimensional": false,
+      "global_terminal_odp_count": null,
+      "verified_odp_count_among_the_four_claimed_chart_samples": 0,
+      "reason_global_count_is_null": "Multiplicity-two singular curves remain, so this is not a terminal isolated-singularity locus.",
+      "verified_curve_components_on_the_stage_33_exceptional_cover": [
+        {
+          "name": "C1",
+          "dimension": 1,
+          "chart_representatives": [
+            {
+              "chart": 212,
+              "variables": ["x0", "x2", "x3"],
+              "prime_ideal_generators": [
+                "x2*x3^2+x3^3-4*x2*x3-4*x3^2+4*x2+3*x3",
+                "2*x0*x3^2+x2*x3^2+x3^3-2*x0*x3-4*x2*x3-4*x3^2+4*x2+x3+4",
+                "2*x0*x2-x2*x3-x3^2+2*x2+2*x3+3"
+              ]
+            },
+            {
+              "chart": 213,
+              "variables": ["x0", "x2", "x3"],
+              "prime_ideal_generators": [
+                "x2*x3-2*x2+x3-3",
+                "x0*x3^3-4*x0*x3^2+3*x0*x3+x3^2-4*x3+4",
+                "-x0*x3^2+2*x0*x2+2*x0*x3+3*x0-x3+2"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "C2",
+          "dimension": 1,
+          "chart_representatives": [
+            {
+              "chart": 212,
+              "variables": ["x0", "x2", "x3"],
+              "prime_ideal_generators": [
+                "x2+x3^2",
+                "x0*x3^2-x3-1"
+              ]
+            },
+            {
+              "chart": 213,
+              "variables": ["x0", "x2", "x3"],
+              "prime_ideal_generators": [
+                "x0*x3^2+1",
+                "x2+x3+1"
+              ]
+            }
+          ]
+        }
+      ],
+      "claimed_sample_deduplication": [
+        {
+          "global_sample": "P_minus",
+          "on_curve": "C2",
+          "chart_212_coordinates": {"x0": "0", "x2": "-1", "x3": "-1"},
+          "chart_213_coordinates": {"x0": "-1", "x2": "0", "x3": "-1"}
+        },
+        {
+          "global_sample": "P_plus",
+          "on_curve": "C2",
+          "chart_212_coordinates": {"x0": "2", "x2": "-1", "x3": "1"},
+          "chart_213_coordinates": {"x0": "-1", "x2": "-2", "x3": "1"}
+        }
+      ],
+      "overlap_map_from_chart_212_to_chart_213": {
+        "domain": "x2_chart_212 != 0",
+        "x0_chart_213": "1/x2_chart_212",
+        "x2_chart_213": "x0_chart_212*x2_chart_212",
+        "x3_chart_213": "x3_chart_212"
+      }
+    },
+    "exact_certificates": [
+      "For every listed curve ideal C, reduction of f, df/dx0, df/dx2, and df/dx3 modulo C is identically zero over Q.",
+      "The exact ideal dimensions of C1 and C2 are one on charts 212 and 213.",
+      "The stage-33 branch Hessian at each of the four claimed chart samples has rank two, not three, so none is an ODP even before deduplication."
+    ]
+  }
+}

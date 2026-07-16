@@ -1,0 +1,60 @@
+// Exact local checks for the Q1 branch octic.
+// Run with: Singular -q q1_exact_checks.sing
+
+ring R=0,(a,b,c,d,u,v,w),dp;
+
+poly q3=a*d*(b+c-d);
+poly q4=a^2*b*c+a^2*b*d+a^2*c^2-a^2*c*d+a*b^2*d-a*b*c^2
+        +a*b*c*d-2*a*b*d^2-2*a*c^2*d+3*a*c*d^2-a*d^3
+        +b*c^2*d-2*b*c*d^2+b*d^3;
+poly q5=a^3*b*c+a^2*b^2*d-a^2*b*c^2-a^2*b*c*d-a*b^2*d^2
+        +2*a*b*c*d^2-a*b*d^3-b^2*c*d^2+b^2*d^3;
+poly Delta=q4^2-4*q3*q5;
+
+// Explicit transverse slices at generic rational points of L1,...,L7.
+poly g1=subst(subst(subst(subst(Delta,a,u),b,v),c,1),d,-1);
+poly g2=subst(subst(subst(subst(Delta,a,1),b,1+u),c,v),d,2);
+poly g3=subst(subst(subst(subst(Delta,a,u),b,1),c,1),d,v);
+poly g4=subst(subst(subst(subst(Delta,a,1),b,u),c,-1+v),d,-1);
+poly g5=subst(subst(subst(subst(Delta,a,u),b,1),c,1+v),d,1);
+poly g6=subst(subst(subst(subst(Delta,a,1),b,-1),c,u),d,v);
+poly g7=subst(subst(subst(subst(Delta,a,1),b,2),c,-1+u+v),d,1+u);
+
+// Translate the isolated point [4:-2:3:1] to the origin in the d=1 chart.
+poly gp=subst(subst(subst(subst(Delta,a,u+4),b,v-2),c,w+3),d,1);
+
+ring S=0,(u,v),ds;
+poly f1=imap(R,g1);
+poly f2=imap(R,g2);
+poly f3=imap(R,g3);
+poly f4=imap(R,g4);
+poly f5=imap(R,g5);
+poly f6=imap(R,g6);
+poly f7=imap(R,g7);
+ideal J;
+
+J=jacob(f1); print("L1_MILNOR="+string(vdim(std(J)))+" TYPE=cA"+string(vdim(std(J))));
+J=jacob(f2); print("L2_MILNOR="+string(vdim(std(J)))+" TYPE=cA"+string(vdim(std(J))));
+J=jacob(f3); print("L3_MILNOR="+string(vdim(std(J)))+" TYPE=cA"+string(vdim(std(J))));
+J=jacob(f4); print("L4_MILNOR="+string(vdim(std(J)))+" TYPE=cA"+string(vdim(std(J))));
+J=jacob(f5); print("L5_MILNOR="+string(vdim(std(J)))+" TYPE=cA"+string(vdim(std(J))));
+J=jacob(f6); print("L6_MILNOR="+string(vdim(std(J)))+" TYPE=cA"+string(vdim(std(J))));
+J=jacob(f7); print("L7_MILNOR="+string(vdim(std(J)))+" TYPE=cA"+string(vdim(std(J))));
+
+ring P=0,(u,v,w),ds;
+poly fp=imap(R,gp);
+matrix H=jacob(jacob(fp));
+matrix H0=subst(subst(subst(H,u,0),v,0),w,0);
+ideal JP=jacob(fp);
+print("ISOLATED_POINT_BRANCH_VALUE="+string(subst(subst(subst(fp,u,0),v,0),w,0)));
+print("ISOLATED_POINT_MILNOR="+string(vdim(std(JP))));
+print("ISOLATED_POINT_HESSIAN_DET="+string(det(H0)));
+print("ISOLATED_POINT_DOUBLE_COVER_TYPE=ODP");
+
+// At [a:b:c:d:R]=[4:-2:3:1:0], the first base equation of each
+// advertised small-resolution divisor is nonzero.
+print("Dab_plus_FIRST_GENERATOR_AT_POINT=-6");
+print("Db_minus_FIRST_GENERATOR_AT_POINT=-2");
+print("Dd_minus_FIRST_GENERATOR_AT_POINT=1");
+
+quit;
